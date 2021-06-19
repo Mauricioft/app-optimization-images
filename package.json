@@ -1,17 +1,17 @@
 {
   "name": "app-optimization-images",
   "version": "1.0.0",
-  "description": "",
+  "description": "It is an application for the automation of the image optimization process",
   "main": "index.js",
   "scripts": {
     "gulp:imagemin": "npx gulp imagemin",
-    "gulp:sharp": "npx gulp sharpall",
-    "gulp:sharponlyjpg": "npx gulp sharponlyjpg",
+    "gulp:sharpwebp": "npx gulp sharpwebp",
+    "gulp:sharpjpg": "npx gulp sharpjpg",
     "gulp:sharppng": "npx gulp sharppng"
   },
   "keywords": [],
   "author": "Mauricio Flor",
-  "license": "MIT",
+  "license": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",

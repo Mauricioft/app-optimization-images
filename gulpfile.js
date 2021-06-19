@@ -5,7 +5,7 @@ const pngquant = require('imagemin-pngquant')
 const sharpResponsive = require('gulp-sharp-responsive')
 
 gulp.task('imagemin', async () => {
-  await gulp.src('images/compression/*')
+  await gulp.src('images/*')
     .pipe(imagemin([
       pngquant({
         quality: [0.5, 0.5]
@@ -17,19 +17,11 @@ gulp.task('imagemin', async () => {
     .pipe(gulp.dest('src/assets/images/compression/'))
 })
 
-gulp.task('sharpall', async () => {
-  await gulp.src('src/assets/images/compression/*.{jpg,png}')
+gulp.task('sharpwebp', async () => {
+  await gulp.src('src/assets/images/compression/*.')
     .pipe(sharpResponsive({
       includeOriginalFile: true,
       formats: [
-        { width: 450, format: 'jpeg', rename: { suffix: '-sm' } },
-        { width: 750, format: 'jpeg', rename: { suffix: '-md' } },
-        { width: 1024, format: 'jpeg', rename: { suffix: '-lg' } },
-
-        { width: 450, format: 'png', rename: { suffix: '-sm' } },
-        { width: 750, format: 'png', rename: { suffix: '-md' } },
-        { width: 1024, format: 'png', rename: { suffix: '-lg' } },
-
         { width: 450, format: 'webp', rename: { suffix: '-sm' } },
         { width: 750, format: 'webp', rename: { suffix: '-md' } },
         { width: 1024, format: 'webp', rename: { suffix: '-lg' } },
@@ -38,7 +30,7 @@ gulp.task('sharpall', async () => {
     .pipe(gulp.dest('src/assets/images/sharp/'))
 })
 
-gulp.task('sharponlyjpg', async () => {
+gulp.task('sharpjpg', async () => {
   await gulp.src('src/assets/images/compression/*.jpg')
     .pipe(sharpResponsive({
       includeOriginalFile: true,
