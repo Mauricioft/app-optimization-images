@@ -1,0 +1,6 @@
+images/*
+src/assets/images/compression/*
+src/assets/images/sharp/*
+
+node_modules/*
+package-lock.json

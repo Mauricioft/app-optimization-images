@@ -1,0 +1,22 @@
+{
+  "name": "app-optimization-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp:imagemin": "npx gulp imagemin",
+    "gulp:sharp": "npx gulp sharpall",
+    "gulp:sharponlyjpg": "npx gulp sharponlyjpg",
+    "gulp:sharppng": "npx gulp sharppng"
+  },
+  "keywords": [],
+  "author": "Mauricio Flor",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sharp-responsive": "^0.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2"
+  }
+}
